@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Jquary Animation</title>
+  <meta name="author" content="Yannick Frisart">
+  <meta name="keywords" content="jquery">
+  <meta name="description" content="Jquery Animation">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Caveat:400,700%7CMarck+Script%7CPress+Start+2P" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+</head>
+<body>
+ <div class="center-wrapper">
+  <div class="wrapper">
+   <div class="grass"></div>
+    <img src="links/character.png" alt="character" id="character">
+    <div id="music-switch" onclick="backgroundMusicSwitch()"></div>
+    <a href="https://github.com/yannick1691/jquaryGame" target="_blank" class="github"><img src="links/icons/Octocat.png" height="55" alt="github"></a>
+    <div class="guide">
+      <div class="step1">
+        <p>
+          Je kan bewegen met je arrow keys!
+        </p>
+      </div>
+      <div class="step2">
+        <p>
+          Je kan muziek aan en uit zetten door op je spatiebar te drukken!
+        </p>
+      </div>
+      <div class="step3">
+        <p>
+          Of door op de muziek knop te drukken!<br>
+          rechts bovenin.
+        </p>
+      </div>
+    </div>
+    <div class="portfolio-item1">
+      <p>Hallo, Ik ben yannick!<br>Ik Volg de opleiding Mediavormgeving in de richting interactief op het MediaCollege Amsterdam.<br>Deze hele basis simpele game is gemaakt met javascript met de Jquary library<br>Je kan het process vinden op de github project pagina door op de knop rechts bovenin te drukken<br><br><br><br>
+      ~Yannick Frisart MV2C</p>
+    </div>
+    <div class="portfolio-item2">
+      <h2 data-info="vaardigheden">Mijn Vaardigheden</h2>
+      <img data-info="css3" src="links/attributes/css3.png" alt="css3" height="200">
+      <img data-info="html5" src="links/attributes/html5.png" alt="html5" height="200">
+      <img data-info="js" src="links/attributes/js.png" alt="javascript" height="200">
+    </div>
+  </div>
+ </div>
+ <audio src="links/music/background.mp3" loop css="hidden" data-music="background"></audio>
+  <audio src="links/music/jump.wav" css="hidden" data-music="jump"></audio>
+  <script>
+    const character = document.querySelector('#character');
+    const musicSwitch = document.querySelector('#music-switch');
+    const container = document.querySelector('body');
+    const scene = document.querySelector('.wrapper');
+    const grass = document.querySelector('.grass');
+    var backgroundMusic = document.querySelector('audio[data-music="background"]');
+    backgroundMusic.volume = 0.1;
+    const jumpSound = document.querySelector('audio[data-music="jump"]');
+    const guide = document.querySelector('.guide');
+    let audioPlaying = false;
+    var i = 10;
+    var backgroundForward = 0;
+    var backgroundBackward = 0;
+  </script>
+  <script src="js/scrips.js"></script>
+</body>
+</html>
