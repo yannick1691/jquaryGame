@@ -5,41 +5,62 @@ $(document).ready(function(){
 //     character Movement
 // ----------------------------
 function walk(e){
-  /*Move right*/
   let position = parseInt(scene.style.backgroundPositionX);
-  let characterHeight = parseInt(character.style.bottom);
   if(e.keyCode === 39){ // Code Om naar Rechts te gaan
-//    character.style.left = `${i}px`;
+    character.src = "links/character/moving@2x.png";
     character.style.transform = 'rotate(0deg)';
     scene.style.backgroundPosition = `${backgroundForward}px`;
     i = i + 15;
     backgroundForward = i - (i * 2.1);
     backgroundBackward = backgroundForward;
   } else if(e.keyCode === 37 && position <= -20) {  // Code Om Naar Links Te Gaan
-//    character.style.left = `${i}px`;
-    character.style.transform = `rotate(${i}deg)`;
+    character.src = "links/character/moving@2x.png";
+    character.style.transform = 'rotate(180deg)';
     scene.style.backgroundPosition = `${backgroundBackward}px`;
     i = i - 15;
     backgroundBackward = i - (i * 2);
     backgroundForward = backgroundBackward;
-  } else if(e.keyCode === 38){  // Code Om Omhoog te gaan
+  } else if(e.keyCode === 38 && characterHeight >= 591 && maxHeight === false){  // Code Die Kijkt of je Max height heb bereikt
+    character.src = "links/character/moving@2x.png";
+    character.style.transform = 'rotate(-90deg)';
+    maxHeight = true;
+    $('#character').animate({bottom: '601px'},450);
+    $('#character').animate({bottom: '591px'},450);
+    noAcces.currentTime = 0;
+    noAcces.play();
+    setTimeout(function(){
+      maxHeight = false;
+      characterHeight = parseInt(character.style.bottom);
+    }, 1050);
+  } else if(e.keyCode === 40 && characterHeight <= 20 && minHeight === false){  // Code Die Kijkt Of Je Niet MinHeight Heb bereikt
+    character.src = "links/character/moving@2x.png";
+    character.style.transform = 'rotate(90deg)';
+    minHeight = true;
+    $('#character').animate({bottom: '4px'},450);
+    $('#character').animate({bottom: '20px'},450);
+    noAcces.currentTime = 0;
+    noAcces.play();
+    setTimeout(function(){
+      minHeight = false;
+      characterHeight = parseInt(character.style.bottom);
+    }, 1050);
+  } else if(e.keyCode === 38 && characterHeight <= 590){  // Code Om Omhoog te gaan
+    character.src = "links/character/moving@2x.png";
     f = f + 20;
     character.style.transform = 'rotate(-90deg)';
     character.style.bottom = `${f}px`;
-//    f = parseInt(character.style.bottom);
-    jumpSound.currentTime = 0;
-    jumpSound.play();
+    characterHeight = parseInt(character.style.bottom);
+  } else if(e.keyCode === 40 && characterHeight >=21){  // Code Om Omlaag te gaan
+    character.src = "links/character/moving@2x.png";
+    f = f - 20;
+    character.style.transform = 'rotate(90deg)';
+    character.style.bottom = `${f}px`;
+    characterHeight = parseInt(character.style.bottom);
   }
-  
-  console.info(position);
   
   if(position <= -200){
     $('.guide').fadeOut('slow');
   }
-  
-// -------------------------
-//  Tree code
-// -------------------------
   
 // -------------------------
 //  Portfolio Item 1 code
@@ -170,9 +191,6 @@ if(e.keyCode === 32 && audioPlaying === false){
   audioPlaying = false;
 }
 }
-function test(e){
-  console.log(e.keyCode);
-}
 
 function backgroundMusicSwitch(){
   if(audioPlaying === false){
@@ -186,4 +204,9 @@ function backgroundMusicSwitch(){
 }
 }
 
+function characterReset(){
+  character.src = "links/character/notMoving@2x.png";
+}
+
 container.addEventListener('keydown', walk);
+container.addEventListener('keyup', characterReset);

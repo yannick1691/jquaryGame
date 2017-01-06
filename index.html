@@ -88,20 +88,20 @@
   </div>
  </div>
  <audio src="links/music/background.mp3" loop css="hidden" data-music="background"></audio>
-  <audio src="links/music/jump.wav" css="hidden" data-music="jump"></audio>
+ <audio src="links/music/denied.wav" css="hidden" data-music="denied"></audio>
   <script>
+    const noAcces = document.querySelector('audio[data-music="denied"]');
     const character = document.querySelector('#character');
     const musicSwitch = document.querySelector('#music-switch');
     const container = document.querySelector('body');
     const scene = document.querySelector('.wrapper');
     const grass = document.querySelector('.grass');
     var backgroundMusic = document.querySelector('audio[data-music="background"]');
-    backgroundMusic.volume = 0.1;
-    const jumpSound = document.querySelector('audio[data-music="jump"]');
+    backgroundMusic.volume = 0.3;
     const guide = document.querySelector('.guide');
     let audioPlaying = false;
     var i = 10;
-    var f = 10;
+    var f = 300;
     var backgroundForward = 0;
     var backgroundForward2 = 0;
     var backgroundBackward = 0;
@@ -113,7 +113,10 @@
     let PoIt5Ran = false;
     let node = $('img[data-info="node-l"]');
     let php = $('img[data-info="php-l"]');
-    let react = $('img[data-info="react-l"]')
+    let react = $('img[data-info="react-l"]');
+    let maxHeight = false;
+    let minHeight = false;
+    let characterHeight = 300;
   </script>
   <script src="js/scrips.js"></script>
 </body>

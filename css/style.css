@@ -167,9 +167,9 @@ h2{
 #character{
   width: 90px;
   position: absolute;
-  bottom: 30px;
+  bottom: 300px;
   left: 102px;
-  transition: all 0.25s ease-in-out, transform 0.8s ease-in-out;
+  transition: all 0.09s ease-in-out, transform 0.8s ease-in-out;
   transform: rotate(0deg);
   z-index: 10;
 }
