@@ -47,13 +47,13 @@ function walk(e){
 // -------------------------
   
 if(position>= -1200 && position <= -760 && PoIt1Ran === true) {
-  $('.portfolio-item1').stop().animate({height: '0px', width: '0px', padding: '0px'}, 220);
+  $('.portfolio-item1').stop().animate({width: '0px', padding: '0px'}, 320);
   PoIt1Ran = false;
 } else if(position <= -1214 && position >= -1400 && PoIt1Ran === false) {
-  $('.portfolio-item1').stop().animate({height: '500px', width: '1200px', padding: '15px'}, 420);
+  $('.portfolio-item1').stop().animate({width: '1200px', padding: '15px'}, 620);
   PoIt1Ran = true;
 } else if(position <= -1650 && position >= -1700 && PoIt1Ran === true) {
-  $('.portfolio-item1').stop().animate({height: '0px', width: '0px', padding: '0px'}, 220);
+  $('.portfolio-item1').stop().animate({width: '0px', padding: '0px'}, 320);
   PoIt1Ran = false;
 }
 
@@ -63,62 +63,71 @@ if(position>= -1200 && position <= -760 && PoIt1Ran === true) {
 
 if(position>= -1990 && position <= -1715 && PoIt2Ran === true) {
 //  $('.portfolio-item2').stop().slideUp(100);
-  $('h2[data-info="vaardigheden"]').stop().animate({top: '-300px'}, 160);
-  $('img[data-info="css3"]').stop().animate({top: '800px'}, 170);
-  $('img[data-info="html5"]').stop().animate({top: '800px'}, 170);
-  $('img[data-info="js"]').stop().animate({top: '800px'}, 170);
+  $('h2[data-info="vaardigheden"]').stop().animate({top: '-290px'}, 360);
+  $('img[data-info="css3"]').stop().animate({top: '800px'}, 370);
+  $('img[data-info="html5"]').stop().animate({top: '800px'}, 370);
+  $('img[data-info="js"]').stop().animate({top: '800px'}, 370);
   PoIt2Ran = false;
-} else if(position <= -2000 && position >= -2700 && PoIt2Ran === false) {
+} else if(position <= -2000 && position >= -2500 && PoIt2Ran === false) {
 //  $('.portfolio-item2').stop().slideDown(200);
-  $('h2[data-info="vaardigheden"]').stop().animate({top: '-50px'}, 170);
-  $('img[data-info="css3"]').stop().animate({top: '120px'}, 190, 'swing');
-  $('img[data-info="html5"]').stop().animate({top: '120px'}, 190, 'swing');
-  $('img[data-info="js"]').stop().animate({top: '120px'}, 190, 'swing');
+  $('h2[data-info="vaardigheden"]').stop().animate({top: '-50px'}, 670);
+  $('img[data-info="css3"]').stop().animate({top: '120px'}, 690, 'swing');
+  $('img[data-info="html5"]').stop().animate({top: '120px'}, 690, 'swing');
+  $('img[data-info="js"]').stop().animate({top: '120px'}, 690, 'swing');
   PoIt2Ran = true
-} else if(position <= -2900 && position >= -3050 && PoIt2Ran === true) {
+} else if(position <= -2700 && position >= -2850 && PoIt2Ran === true) {
 //  $('.portfolio-item2').stop().slideUp(100);
-  $('h2[data-info="vaardigheden"]').stop().animate({top: '-300px'}, 160);
-  $('img[data-info="css3"]').stop().animate({top: '800px'}, 170);
-  $('img[data-info="html5"]').stop().animate({top: '800px'}, 170);
-  $('img[data-info="js"]').stop().animate({top: '800px'}, 170);
+  $('h2[data-info="vaardigheden"]').stop().animate({top: '-290px'}, 360);
+  $('img[data-info="css3"]').stop().animate({top: '800px'}, 370);
+  $('img[data-info="html5"]').stop().animate({top: '800px'}, 370);
+  $('img[data-info="js"]').stop().animate({top: '800px'}, 370);
   PoIt2Ran = false;
 }
   
 // -------------------------
 //  Portfolio Item 3 code
 // -------------------------
-if(position >= -3490 && position <= - 3100) {
-  $('h2[data-info="timeSpent"]').stop().animate({'margin-top': '-800px'}, 160);
-  $('p[data-info="html-hours"]').stop().animate({opacity: '0', 'font-size': '10px'},200);
-  $('p[data-info="css-hours"]').stop().animate({opacity: '0', 'font-size': '10px'},200);
-  $('p[data-info="js-hours"]').stop().animate({opacity: '0', 'font-size': '10px'},200);
-} else if(position <= -3500 && position >= -4000) {
-  $('h2[data-info="timeSpent"]').stop().animate({'margin-top': '170px'}, 380);
-  $('p[data-info="html-hours"]').stop().animate({opacity: '1', 'font-size': '45px'},290);
-  $('p[data-info="css-hours"]').stop().animate({opacity: '1', 'font-size': '45px'},290);
-  $('p[data-info="js-hours"]').stop().animate({opacity: '1', 'font-size': '45px'},290);
-} else if(position <= -4200 && position >= -4250) {
-  $('h2[data-info="timeSpent"]').stop().animate({'margin-top': '-800px'}, 160);
-  $('p[data-info="html-hours"]').stop().animate({opacity: '0', 'font-size': '10px'},200);
-  $('p[data-info="css-hours"]').stop().animate({opacity: '0', 'font-size': '10px'},200);
-  $('p[data-info="js-hours"]').stop().animate({opacity: '0', 'font-size': '10px'},200);
+if(position >= -3090 && position <= - 2900 && PoIt3Ran === true) {
+  $('h2[data-info="timeSpent"]').stop().animate({'margin-top': '-100px'}, 360);
+  $('p[data-info="html-hours"]').stop().animate({opacity: '0', 'font-size': '10px'},300);
+  $('p[data-info="css-hours"]').stop().animate({opacity: '0', 'font-size': '10px'},300);
+  $('p[data-info="js-hours"]').stop().animate({opacity: '0', 'font-size': '10px'},300);
+  PoIt3Ran = false;
+} else if(position <= -3100 && position >= -3400 && PoIt3Ran === false) {
+  $('h2[data-info="timeSpent"]').stop().animate({'margin-top': '170px'}, 880);
+  $('p[data-info="html-hours"]').stop().animate({opacity: '1', 'font-size': '45px'},890);
+  $('p[data-info="css-hours"]').stop().animate({opacity: '1', 'font-size': '45px'},890);
+  $('p[data-info="js-hours"]').stop().animate({opacity: '1', 'font-size': '45px'},890);
+  PoIt3Ran = true;
+} else if(position <= -3650 && position >= -3750 && PoIt3Ran === true) {
+  $('h2[data-info="timeSpent"]').stop().animate({'margin-top': '-100px'}, 360);
+  $('p[data-info="html-hours"]').stop().animate({opacity: '0', 'font-size': '10px'},300);
+  $('p[data-info="css-hours"]').stop().animate({opacity: '0', 'font-size': '10px'},300);
+  $('p[data-info="js-hours"]').stop().animate({opacity: '0', 'font-size': '10px'},300);
+  PoIt3Ran = false;
 }
   
 // -------------------------
 //  Portfolio Item 4 code
 // -------------------------
-if(position >= -4490 && position <= -4290){
-  $('img[data-info="es6-l"]').stop().animate({bottom: '-300px'},200);
-  $('img[data-info="jquary-l"]').stop().animate({right: '1400px'},200);
-  $('img[data-info="less-l"]').stop().animate({left: '1400px'},200);
-} else if(position <= -4500 && position >= -5000){
-  $('img[data-info="es6-l"]').stop().animate({bottom: '80px'},450);
-  $('img[data-info="jquary-l"]').stop().animate({right: '50px'},450);
-  $('img[data-info="less-l"]').stop().animate({left: '50px'},450);
-} else if(position <= -5200 && position >= -5250){
-  $('img[data-info="es6-l"]').stop().animate({bottom: '-300px'},200);
-  $('img[data-info="jquary-l"]').stop().animate({right: '1400px'},200);
-  $('img[data-info="less-l"]').stop().animate({left: '1400px'},200);
+if(position >= -3934 && position <= -3820 && PoIt4Ran === true){
+  $('h2[data-info="watImLearning"]').stop().animate({'margin-top': '-170px'},360)
+  $('img[data-info="es6-l"]').stop().animate({bottom: '-300px'},300);
+  $('img[data-info="jquary-l"]').stop().animate({right: '1400px'},300);
+  $('img[data-info="less-l"]').stop().animate({left: '1400px'},300);
+  PoIt4Ran = false;
+} else if(position <= -3950 && position >= -4250 && PoIt4Ran === false){
+  $('h2[data-info="watImLearning"]').stop().animate({'margin-top': '170px'},360)
+  $('img[data-info="es6-l"]').stop().animate({bottom: '80px'},600);
+  $('img[data-info="jquary-l"]').stop().animate({right: '50px'},600);
+  $('img[data-info="less-l"]').stop().animate({left: '50px'},600);
+  PoIt4Ran = true;
+} else if(position <= -4390 && position >= -4550 && PoIt4Ran === true){
+  $('h2[data-info="watImLearning"]').stop().animate({'margin-top': '-170px'},360)
+  $('img[data-info="es6-l"]').stop().animate({bottom: '-300px'},300);
+  $('img[data-info="jquary-l"]').stop().animate({right: '1400px'},300);
+  $('img[data-info="less-l"]').stop().animate({left: '1400px'},300);
+  PoIt4Ran = false;
 }
   
 // --------------------------

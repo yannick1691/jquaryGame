@@ -101,7 +101,7 @@ h2{
   top: 20px;
   right: 100px;
   width: 0px;
-  height: 0px;
+  height: 500px;
   overflow: hidden;
   background: #0b0b0b;
   color: lime;
@@ -133,7 +133,7 @@ h2{
   font-size: 45px;
   color: #e2cb1e;
   position: absolute;
-  top: -300px;
+  top: -290px;
 }
 
 .portfolio-item2 img{
@@ -259,7 +259,7 @@ h2{
   font-size: 42px;
   color: #e2cb1e;
   text-align: center;
-  margin-top: -800px;
+  margin-top: -100px;
 }
 
 .portfolio-item4{
@@ -297,4 +297,8 @@ h2{
   position: absolute;
   bottom: 90px;
   right: 1400px;
+}
+
+[data-info="watImLearning"]{
+  margin-top: -170px;
 }
