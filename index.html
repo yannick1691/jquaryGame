@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Jquary Animation</title>
+  <meta name="author" content="Yannick Frisart">
+  <meta name="keywords" content="jquery">
+  <meta name="description" content="Jquery Animation">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Caveat:400,700%7CMarck+Script%7CPress+Start+2P" rel="stylesheet">
+</head>
+<body>
+ <div class="center-wrapper">
+  <div class="wrapper">
+    <img src="links/character.png" alt="character" id="character">
+    <div id="music-switch" onclick="backgroundMusicSwitch()"></div>
+    <div class="guide">
+      <div class="step1">
+        <p>
+          Je kan bewegen met je arrow keys!
+        </p>
+      </div>
+      <div class="step2">
+        <p>
+          Je kan muziek aan en uit zetten door op je spatiebar te drukken!
+        </p>
+      </div>
+      <div class="step3">
+        <p>
+          Of door op de muziek knop te drukken!<br>
+          rechts bovenin.
+        </p>
+      </div>
+    </div>
+    <div class="portfolio-item1">
+      <p>Ham pig strip corned pork. Tongue tenderloin ham bregenwurst, swine drumstick 
+        cow bregenwurst cow strip sopressata pastrami boudin hamburger pig cow kevin tip 
+        jowl, chop pig ham kevin kielbasa, loin bregenwurst capicola belly hamburger cow 
+        tip t-bone loin cow fatback, ribs meatball ham flank ground. Biltong tip ribs 
+        porchetta. Pig chop tri-tip braunschweiger, jowl sausage andouillette cow 
+        turducken.</p>
+    </div>
+    <div class="portfolio-item2">
+      <p>Hallo Dit is een test Tekst voor de animatie</p>
+    </div>
+  </div>
+ </div>
+ <audio src="links/music/background.mp3" loop css="hidden" data-music="background"></audio>
+  <audio src="links/music/jump.wav" css="hidden" data-music="jump"></audio>
+  <script>
+    const character = document.querySelector('#character');
+    const musicSwitch = document.querySelector('#music-switch');
+    const container = document.querySelector('body');
+    const scene = document.querySelector('.wrapper');
+    var backgroundMusic = document.querySelector('audio[data-music="background"]');
+    backgroundMusic.volume = 0.1;
+    const jumpSound = document.querySelector('audio[data-music="jump"]');
+    const guide = document.querySelector('.guide');
+    let audioPlaying = false;
+    var i = 10;
+    var backgroundForward = 0;
+    var backgroundBackward = 0;
+  </script>
+  <script src="js/scrips.js"></script>
+</body>
+</html>

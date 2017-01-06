@@ -1,0 +1,153 @@
+/*
+font-family: 'Caveat', cursive;
+font-family: 'Marck Script', cursive;
+font-family: 'Press Start 2P', cursive;
+*/
+
+body{
+  background: #0b0f40;
+  background-image: url(../links/background/overlay.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top center;
+  padding: 0px;
+  margin: 0px;
+}
+
+p{
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.guide{
+  display: block;
+  width: 1400px;
+  height: 700px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.step1{
+  display: block;
+  position: absolute;
+  top: 150px;
+  left: 430px;
+}
+
+.step1 p{
+  color: floralwhite;
+  text-align: center;
+}
+
+.step2{
+  display: block;
+  position: absolute;
+  top: 180px;
+  left: 200px;
+}
+
+.step2 p{
+  color: lightslategray;
+}
+
+.step3{
+  display: block;
+  position: absolute;
+  top: 210px;
+  left: 400px;
+}
+
+.step3 p{
+  text-align: center;
+  line-height: 22px;
+}
+
+#music-switch{
+  position: absolute;
+  overflow: hidden;
+  width: 65px;
+  height: 65px;
+  top: 30px;
+  right: 30px;
+  background-image: url(../links/icons/music.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -64px;
+}
+
+.center-wrapper{
+  width: 100vw;
+  height: 100vh;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.portfolio-item1{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  background: red;
+  border-radius: 5px;
+  padding: 0px;
+}
+
+.portfolio-item2{
+  position: absolute;
+  top: 150px;
+  right: 200px;
+  width: 1000px;
+  height: 400px;
+  overflow: hidden;
+  background: blue;
+  border-radius: 5px;
+  padding: 10px;
+  display: none;
+}
+
+.wrapper{
+  background: white;
+  width: 1400px;
+  height: 700px;
+  position: relative;
+  background-image: url(../links/background/background.jpg);
+  background-position: 1px;
+  transition: background 0.2s linear;
+}
+
+#character{
+  width: 40px;
+  position: absolute;
+  bottom: 30px;
+  left: 102px;
+  transition: all 0.1s ease-in-out;
+  transform: rotate(0deg);
+  z-index: 10;
+}
+
+.hidden{
+  display: none;
+}
+
+.visible{
+  display: block;
+}
+
+.jumpi{
+  position: absolute;
+  bottom: 340px;
+  left: 15px;
+  border-radius: 30px;
+  width: 90px;
+  height: 50px;
+  color: red;
+  font-family: fantasy;
+  font-size: 40px;
+  text-align: center;
+}
