@@ -15,8 +15,7 @@
 <body>
  <div class="center-wrapper">
   <div class="wrapper">
-   <div class="grass"></div>
-    <img src="links/character.png" alt="character" id="character">
+    <img src="links/character/notMoving@2x.png" alt="character" id="character">
     <div id="music-switch" onclick="backgroundMusicSwitch()"></div>
     <a href="https://github.com/yannick1691/jquaryGame" target="_blank" class="github"><img src="links/icons/Octocat.png" height="55" alt="github"></a>
     <div class="guide">
@@ -79,7 +78,12 @@
       </div>
     </div>
     <div class="portfolio-item5">
-      
+      <h2 data-info="watIkWilLeren">Wat ik wil leren in de toekomst:</h2>
+      <div data-info="langEnFrameworks">
+        <img data-info="node-l" src="links/attributes/node.png" alt="node" height="150">
+        <img data-info="php-l" src="links/attributes/php.png" alt="php" height="150">
+        <img data-info="react-l" src="links/attributes/react.png" alt="react" height="150">
+      </div>
     </div>
   </div>
  </div>
@@ -97,13 +101,19 @@
     const guide = document.querySelector('.guide');
     let audioPlaying = false;
     var i = 10;
+    var f = 10;
     var backgroundForward = 0;
+    var backgroundForward2 = 0;
     var backgroundBackward = 0;
+    var backgroundBackward2 = 0;
     let PoIt1Ran = false;
     let PoIt2Ran = false;
     let PoIt3Ran = false;
     let PoIt4Ran = false;
     let PoIt5Ran = false;
+    let node = $('img[data-info="node-l"]');
+    let php = $('img[data-info="php-l"]');
+    let react = $('img[data-info="react-l"]')
   </script>
   <script src="js/scrips.js"></script>
 </body>
