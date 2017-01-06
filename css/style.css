@@ -27,6 +27,7 @@ p{
   height: 700px;
   overflow: hidden;
   position: absolute;
+  z-index: 1;
 }
 
 .step1{
@@ -75,6 +76,7 @@ p{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: -64px;
+  z-index: 2;
 }
 
 .center-wrapper{
@@ -89,13 +91,20 @@ p{
 .portfolio-item1{
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 100px;
   width: 0px;
   height: 0px;
   overflow: hidden;
-  background: red;
+  background: #0b0b0b;
+  color: lime;
   border-radius: 5px;
   padding: 0px;
+  z-index: 50;
+  line-height: 30px;
+}
+
+.portfolio-item1 p{
+  color:lime;
 }
 
 .portfolio-item2{
@@ -109,6 +118,7 @@ p{
   border-radius: 5px;
   padding: 10px;
   display: none;
+  z-index: 50;
 }
 
 .wrapper{
@@ -150,4 +160,23 @@ p{
   font-family: fantasy;
   font-size: 40px;
   text-align: center;
+}
+
+.grass{
+  display: block;
+  width: 1400px;
+  height: 200px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-image: url(../links/background/grass.png);
+  background-position: 1px;
+  transition: background 0.2s linear;
+}
+
+.github{
+  position: absolute;
+  top: 35px;
+  right: 100px;
+  z-index: 2;
 }

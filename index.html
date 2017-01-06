@@ -13,8 +13,10 @@
 <body>
  <div class="center-wrapper">
   <div class="wrapper">
+   <div class="grass"></div>
     <img src="links/character.png" alt="character" id="character">
     <div id="music-switch" onclick="backgroundMusicSwitch()"></div>
+    <a href="https://github.com/yannick1691/jquaryGame" target="_blank" class="github"><img src="links/icons/Octocat.png" height="55"></a>
     <div class="guide">
       <div class="step1">
         <p>
@@ -34,12 +36,7 @@
       </div>
     </div>
     <div class="portfolio-item1">
-      <p>Ham pig strip corned pork. Tongue tenderloin ham bregenwurst, swine drumstick 
-        cow bregenwurst cow strip sopressata pastrami boudin hamburger pig cow kevin tip 
-        jowl, chop pig ham kevin kielbasa, loin bregenwurst capicola belly hamburger cow 
-        tip t-bone loin cow fatback, ribs meatball ham flank ground. Biltong tip ribs 
-        porchetta. Pig chop tri-tip braunschweiger, jowl sausage andouillette cow 
-        turducken.</p>
+      <p>Hallo, Ik ben yannick!<br>Ik Volg de opleiding Mediavormgeving in de richting interactief op het MediaCollege Amsterdam.<br>Deze hele basis simpele game is gemaakt met javascript met de Jquary library</p>
     </div>
     <div class="portfolio-item2">
       <p>Hallo Dit is een test Tekst voor de animatie</p>
@@ -53,6 +50,7 @@
     const musicSwitch = document.querySelector('#music-switch');
     const container = document.querySelector('body');
     const scene = document.querySelector('.wrapper');
+    const grass = document.querySelector('.grass');
     var backgroundMusic = document.querySelector('audio[data-music="background"]');
     backgroundMusic.volume = 0.1;
     const jumpSound = document.querySelector('audio[data-music="jump"]');

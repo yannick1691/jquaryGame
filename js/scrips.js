@@ -12,6 +12,7 @@ function walk(e){
 //    character.style.left = `${i}px`;
     character.style.transform = `rotate(${i}deg)`;
     scene.style.backgroundPosition = `${backgroundForward}px`;
+    grass.style.backgroundPosition = `${backgroundForward}px`;
     i = i + 16;
     backgroundForward = i - (i * 2.1);
     backgroundBackward = backgroundForward;
@@ -19,6 +20,7 @@ function walk(e){
 //    character.style.left = `${i}px`;
     character.style.transform = `rotate(${i}deg)`;
     scene.style.backgroundPosition = `${backgroundBackward}px`;
+    grass.style.backgroundPosition = `${backgroundBackward}px`;
     i = i - 16;
     backgroundBackward = i - (i * 2);
     backgroundForward = backgroundBackward;
@@ -44,7 +46,7 @@ function walk(e){
 if(position>= -1200 && position <= -1100){
   $('.portfolio-item1').stop().animate({height: '0px', width: '0px', padding: '0px'}, 120);
 } else if(position <= -1214 && position >= -1400){
-  $('.portfolio-item1').stop().animate({height: '500px', width: '1200px', padding: '10px'}, 220);
+  $('.portfolio-item1').stop().animate({height: '500px', width: '1200px', padding: '15px'}, 220);
 } else if(position <= -1700){
   $('.portfolio-item1').stop().animate({height: '0px', width: '0px', padding: '0px'}, 120);
 }
