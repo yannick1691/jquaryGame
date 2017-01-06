@@ -158,18 +158,18 @@ h2{
   width: 1400px;
   height: 700px;
   position: relative;
-  background-image: url(../links/background/background.jpg);
+  background-image: url(../links/background/background.png);
   background-position: 1px;
   transition: background 0.2s linear;
   overflow: hidden;
 }
 
 #character{
-  width: 40px;
+  width: 90px;
   position: absolute;
   bottom: 30px;
   left: 102px;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.25s ease-in-out, transform 0.8s ease-in-out;
   transform: rotate(0deg);
   z-index: 10;
 }
@@ -301,4 +301,46 @@ h2{
 
 [data-info="watImLearning"]{
   margin-top: -170px;
+}
+
+
+[data-info="langEnFrameworks"]{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  width: 1400px;
+  height: 300px;
+  bottom: 100px;
+}
+
+.portfolio-item5{
+  height: 700px;
+  width: 1400px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+[data-info="watIkWilLeren"]{
+  margin-top: -170px;
+}
+
+[data-info="react-l"]{
+  position: absolute;
+  bottom: 90px;
+  right: 1400px;
+}
+
+[data-info="node-l"]{
+  position: absolute;
+  top: 700px;
+  left: 50px;
+}
+
+[data-info="php-l"]{
+  position: absolute;
+  bottom: 90px;
+  right: 1400px;
 }

@@ -7,29 +7,28 @@ $(document).ready(function(){
 function walk(e){
   /*Move right*/
   let position = parseInt(scene.style.backgroundPositionX);
-  if(e.keyCode === 39){
+  let characterHeight = parseInt(character.style.bottom);
+  if(e.keyCode === 39){ // Code Om naar Rechts te gaan
 //    character.style.left = `${i}px`;
-    character.style.transform = `rotate(${i}deg)`;
+    character.style.transform = 'rotate(0deg)';
     scene.style.backgroundPosition = `${backgroundForward}px`;
-    grass.style.backgroundPosition = `${backgroundForward}px`;
     i = i + 15;
     backgroundForward = i - (i * 2.1);
     backgroundBackward = backgroundForward;
-  } else if(e.keyCode === 37 && position <= -20) {
+  } else if(e.keyCode === 37 && position <= -20) {  // Code Om Naar Links Te Gaan
 //    character.style.left = `${i}px`;
     character.style.transform = `rotate(${i}deg)`;
     scene.style.backgroundPosition = `${backgroundBackward}px`;
-    grass.style.backgroundPosition = `${backgroundBackward}px`;
     i = i - 15;
     backgroundBackward = i - (i * 2);
     backgroundForward = backgroundBackward;
-  } else if(e.keyCode === 38){
-    character.style.bottom = '205px';
+  } else if(e.keyCode === 38){  // Code Om Omhoog te gaan
+    f = f + 20;
+    character.style.transform = 'rotate(-90deg)';
+    character.style.bottom = `${f}px`;
+//    f = parseInt(character.style.bottom);
     jumpSound.currentTime = 0;
     jumpSound.play();
-    setTimeout(reset, 150);
-//    $('.jumpi').removeClass('hidden').addClass('visible');
-//    character.style.bottom = '10px';
   }
   
   console.info(position);
@@ -129,6 +128,33 @@ if(position >= -3934 && position <= -3820 && PoIt4Ran === true){
   $('img[data-info="less-l"]').stop().animate({left: '1400px'},300);
   PoIt4Ran = false;
 }
+
+  
+// -------------------------
+//  Portfolio Item 5 code
+// -------------------------
+if(position >= -4760 && position <= -4600 && PoIt5Ran === true){
+  $('h2[data-info="watIkWilLeren"]').stop().animate({'margin-top': '-170px'},360);
+  node.stop().animate({top: '700px'},300);
+  php.stop().animate({right: '1400px'},300);
+  react.stop().animate({right: '1400px'},300);
+  PoIt5Ran = false;
+} else if(position <= -4775 && position >= -5100 && PoIt5Ran === false){
+  $('h2[data-info="watIkWilLeren"]').stop().animate({'margin-top': '170px'},360);
+  node.stop().animate({top: '-100px'},760);
+  node.animate({top: '100px'},600);
+  node.animate({top: '10px'},600);
+  php.stop().animate({right: '30px'},360);
+  react.stop().animate({right: '30px'},360);
+  PoIt5Ran = true;
+} else if(position <= -5200 && position >= -5400 && PoIt5Ran === true){
+  $('h2[data-info="watIkWilLeren"]').stop().animate({'margin-top': '-170px'},360);
+  node.stop().animate({top: '700px'},300);
+  php.stop().animate({right: '1400px'},300);
+  react.stop().animate({right: '1400px'},300);
+  PoIt5Ran = false;
+}
+  
   
 // --------------------------
 //    Background Music
@@ -146,11 +172,6 @@ if(e.keyCode === 32 && audioPlaying === false){
 }
 function test(e){
   console.log(e.keyCode);
-}
-
-function reset(){
-  character.style.bottom = '30px';
-  $('.jumpi').fadeOut(1000);
 }
 
 function backgroundMusicSwitch(){
