@@ -22,6 +22,13 @@ p{
   font-family: 'Press Start 2P', cursive;
 }
 
+h2{
+  font-family: 'Bungee Shade', cursive;
+  font-size: 42px;
+  color: #e2cb1e;
+  text-align: center;
+}
+
 .guide{
   display: block;
   width: 1400px;
@@ -253,4 +260,41 @@ p{
   color: #e2cb1e;
   text-align: center;
   margin-top: -800px;
+}
+
+.portfolio-item4{
+  height: 700px;
+  width: 1400px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+[data-info="frameworksAndLanguages"]{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  width: 1400px;
+  height: 300px;
+  bottom: 100px;
+}
+
+[data-info="es6-l"]{
+  position: absolute;
+  bottom: -300px;
+  right: 630px;
+}
+
+[data-info="less-l"]{
+  position: absolute;
+  left: 1400px;
+  bottom: 90px;
+}
+
+[data-info="jquary-l"]{
+  position: absolute;
+  bottom: 90px;
+  right: 1400px;
 }

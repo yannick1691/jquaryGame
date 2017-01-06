@@ -8,6 +8,7 @@
   <meta name="description" content="Jquery Animation">
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.4.0/velocity.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Caveat:400,700%7CMarck+Script%7CPress+Start+2P" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
 </head>
@@ -70,7 +71,12 @@
       </div>
     </div>
     <div class="portfolio-item4">
-      
+      <h2 data-info="watImLearning">Wat ik nu aan het leren ben:</h2>
+      <div data-info="frameworksAndLanguages">
+        <img data-info="less-l" src="links/attributes/less.png" alt="less" height="120">
+        <img data-info="es6-l" src="links/attributes/es6.png" alt="es6" height="140">
+        <img data-info="jquary-l" src="links/attributes/jquary.png" alt="jquary" height="120">
+      </div>
     </div>
     <div class="portfolio-item5">
       
@@ -93,6 +99,11 @@
     var i = 10;
     var backgroundForward = 0;
     var backgroundBackward = 0;
+    let PoIt1Ran = false;
+    let PoIt2Ran = false;
+    let PoIt3Ran = false;
+    let PoIt4Ran = false;
+    let PoIt5Ran = false;
   </script>
   <script src="js/scrips.js"></script>
 </body>
