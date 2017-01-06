@@ -2,6 +2,7 @@
 font-family: 'Caveat', cursive;
 font-family: 'Marck Script', cursive;
 font-family: 'Press Start 2P', cursive;
+font-family: 'Bungee Shade', cursive;
 */
 
 body{
@@ -113,12 +114,36 @@ p{
   right: 200px;
   width: 1000px;
   height: 400px;
-  overflow: hidden;
-  background: blue;
+/*  background: blue;*/
   border-radius: 5px;
   padding: 10px;
-  display: none;
+  display: ;
   z-index: 50;
+}
+
+.portfolio-item2 h2{
+  font-family: 'Bungee Shade', cursive;
+  font-size: 45px;
+  color: #e2cb1e;
+  position: absolute;
+  top: -300px;
+}
+
+.portfolio-item2 img{
+  position: absolute;
+  top: 800px;
+}
+
+[data-info="css3"]{
+  left: 200px;
+}
+
+[data-info="html5"]{
+  left: 400px;
+}
+
+[data-info="js"]{
+  left: 0px;
 }
 
 .wrapper{
@@ -129,6 +154,7 @@ p{
   background-image: url(../links/background/background.jpg);
   background-position: 1px;
   transition: background 0.2s linear;
+  overflow: hidden;
 }
 
 #character{

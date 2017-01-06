@@ -13,7 +13,7 @@ function walk(e){
     character.style.transform = `rotate(${i}deg)`;
     scene.style.backgroundPosition = `${backgroundForward}px`;
     grass.style.backgroundPosition = `${backgroundForward}px`;
-    i = i + 16;
+    i = i + 15;
     backgroundForward = i - (i * 2.1);
     backgroundBackward = backgroundForward;
   } else if(e.keyCode === 37 && position <= -20) {
@@ -21,7 +21,7 @@ function walk(e){
     character.style.transform = `rotate(${i}deg)`;
     scene.style.backgroundPosition = `${backgroundBackward}px`;
     grass.style.backgroundPosition = `${backgroundBackward}px`;
-    i = i - 16;
+    i = i - 15;
     backgroundBackward = i - (i * 2);
     backgroundForward = backgroundBackward;
   } else if(e.keyCode === 38){
@@ -43,7 +43,7 @@ function walk(e){
 //  Portfolio Item 1 code
 // -------------------------
   
-if(position>= -1200 && position <= -1100){
+if(position>= -1200 && position <= -760){
   $('.portfolio-item1').stop().animate({height: '0px', width: '0px', padding: '0px'}, 120);
 } else if(position <= -1214 && position >= -1400){
   $('.portfolio-item1').stop().animate({height: '500px', width: '1200px', padding: '15px'}, 220);
@@ -55,12 +55,24 @@ if(position>= -1200 && position <= -1100){
 //  Portfolio Item 2 code
 // -------------------------
 
-if(position>= -2000 && position <= -1900){
-  $('.portfolio-item2').stop().slideUp(100);
-} else if(position <= -2000 && position >= -2200){
-  $('.portfolio-item2').stop().slideDown(200);
-} else if(position <= -2600) {
-  $('.portfolio-item2').stop().slideUp(100);
+if(position>= -1990 && position <= -1710){
+//  $('.portfolio-item2').stop().slideUp(100);
+  $('h2[data-info="vaardigheden"]').stop().animate({top: '-300px'}, 80);
+  $('img[data-info="css3"]').stop().animate({top: '800px'}, 60);
+  $('img[data-info="html5"]').stop().animate({top: '800px'}, 60);
+  $('img[data-info="js"]').stop().animate({top: '800px'}, 60);
+} else if(position <= -2000 && position >= -2700){
+//  $('.portfolio-item2').stop().slideDown(200);
+  $('h2[data-info="vaardigheden"]').stop().animate({top: '-50px'}, 'slow');
+  $('img[data-info="css3"]').stop().animate({top: '120px'}, 'slow', 'swing');
+  $('img[data-info="html5"]').stop().animate({top: '120px'}, 'slow', 'swing');
+  $('img[data-info="js"]').stop().animate({top: '120px'}, 'slow', 'swing');
+} else if(position <= -3000) {
+//  $('.portfolio-item2').stop().slideUp(100);
+  $('h2[data-info="vaardigheden"]').stop().animate({top: '-300px'}, 80);
+  $('img[data-info="css3"]').stop().animate({top: '800px'}, 60);
+  $('img[data-info="html5"]').stop().animate({top: '800px'}, 60);
+  $('img[data-info="js"]').stop().animate({top: '800px'}, 60);
 }
 // --------------------------
 //    Background Music
