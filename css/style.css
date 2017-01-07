@@ -154,14 +154,17 @@ h2{
 
 [data-info="css3"]{
   left: 200px;
+  z-index: 999;
 }
 
 [data-info="html5"]{
   left: 400px;
+  z-index: 999;
 }
 
 [data-info="js"]{
   left: 0px;
+  z-index: 999;
 }
 
 .portfolio-item3{
