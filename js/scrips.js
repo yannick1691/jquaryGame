@@ -5,41 +5,58 @@ $(document).ready(function(){
 //     character Movement
 // ----------------------------
 function walk(e){
-  /*Move right*/
   let position = parseInt(scene.style.backgroundPositionX);
-  let characterHeight = parseInt(character.style.bottom);
   if(e.keyCode === 39){ // Code Om naar Rechts te gaan
-//    character.style.left = `${i}px`;
+    character.src = "links/character/moving@2x.png";
     character.style.transform = 'rotate(0deg)';
-    scene.style.backgroundPosition = `${backgroundForward}px`;
-    i = i + 15;
-    backgroundForward = i - (i * 2.1);
-    backgroundBackward = backgroundForward;
+    scene.style.backgroundPosition = `${i}px`;
+    i = i - 20;
   } else if(e.keyCode === 37 && position <= -20) {  // Code Om Naar Links Te Gaan
-//    character.style.left = `${i}px`;
-    character.style.transform = `rotate(${i}deg)`;
-    scene.style.backgroundPosition = `${backgroundBackward}px`;
-    i = i - 15;
-    backgroundBackward = i - (i * 2);
-    backgroundForward = backgroundBackward;
-  } else if(e.keyCode === 38){  // Code Om Omhoog te gaan
+    character.src = "links/character/moving@2x.png";
+    character.style.transform = 'rotate(180deg)';
+    scene.style.backgroundPosition = `${i}px`;
+    i = i + 20;
+  } else if(e.keyCode === 38 && characterHeight >= 591 && maxHeight === false){  // Code Die Kijkt of je Max height heb bereikt
+    character.src = "links/character/moving@2x.png";
+    character.style.transform = 'rotate(-90deg)';
+    maxHeight = true;
+    $('#character').animate({bottom: '601px'},450);
+    $('#character').animate({bottom: '591px'},450);
+    noAcces.currentTime = 0;
+    noAcces.play();
+    setTimeout(function(){
+      maxHeight = false;
+      characterHeight = parseInt(character.style.bottom);
+    }, 1050);
+  } else if(e.keyCode === 40 && characterHeight <= 20 && minHeight === false){  // Code Die Kijkt Of Je Niet MinHeight Heb bereikt
+    character.src = "links/character/moving@2x.png";
+    character.style.transform = 'rotate(90deg)';
+    minHeight = true;
+    $('#character').animate({bottom: '4px'},450);
+    $('#character').animate({bottom: '20px'},450);
+    noAcces.currentTime = 0;
+    noAcces.play();
+    setTimeout(function(){
+      minHeight = false;
+      characterHeight = parseInt(character.style.bottom);
+    }, 1050);
+  } else if(e.keyCode === 38 && characterHeight <= 590){  // Code Om Omhoog te gaan
+    character.src = "links/character/moving@2x.png";
     f = f + 20;
     character.style.transform = 'rotate(-90deg)';
     character.style.bottom = `${f}px`;
-//    f = parseInt(character.style.bottom);
-    jumpSound.currentTime = 0;
-    jumpSound.play();
+    characterHeight = parseInt(character.style.bottom);
+  } else if(e.keyCode === 40 && characterHeight >=21){  // Code Om Omlaag te gaan
+    character.src = "links/character/moving@2x.png";
+    f = f - 20;
+    character.style.transform = 'rotate(90deg)';
+    character.style.bottom = `${f}px`;
+    characterHeight = parseInt(character.style.bottom);
   }
-  
-  console.info(position);
   
   if(position <= -200){
     $('.guide').fadeOut('slow');
   }
-  
-// -------------------------
-//  Tree code
-// -------------------------
   
 // -------------------------
 //  Portfolio Item 1 code
@@ -50,6 +67,12 @@ if(position>= -1200 && position <= -760 && PoIt1Ran === true) {
   PoIt1Ran = false;
 } else if(position <= -1214 && position >= -1400 && PoIt1Ran === false) {
   $('.portfolio-item1').stop().animate({width: '1200px', padding: '15px'}, 620);
+  $(".introductieText").typed({
+        strings: ["Hallo, Ik ben yannick!", "Ik Volg de opleiding Mediavormgeving in de richting interactief op het MediaCollege Amsterdam.", "Deze hele basis simpele 'game' is gemaakt met javascript met de Jquary library", "Je kan het process vinden op de github project pagina door op de knop rechts bovenin te drukken", "~Yannick Frisart MV2C", "────────────────────────────────────<br>──────────▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄──────────<br>────────▄▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄────────<br>──────▐▌▒████▒▒▒▒▒▒▒▒████▒▒▐▌──────<br>──────▐▌▒▒████▒▒▒▒▒▒▒▒████▒▒▐▌──────<br>▐▌▀▄──▐▌▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐▌──▄▀▐▌<br>▐▌▒▒▀▄▐▌▒▒▐▌▀▄▄▀▀▄▄▀▀▄▄▀▐▌▒▒▐▌▄▀▒▒▐▌<br>▐▌▒▒▒▒▐▌▒▒▐▌▒▒▒▒▒▒▒▒▒▒▒▒▐▌▒▒▐▌▒▒▒▒▐▌<br>──▀▄▒▒▐▌▒▒▐▌▒▒▒▒▒▒▒▒▒▒▒▒▐▌▒▒▐▌▒▒▄▀──<br>────▀▄▐▌▒▒▐▌▒▒▒▒▒▒▒▒▒▒▒▒▐▌▒▒▐▌▄▀────<br>──────▐▌▒▒▐▌▄▀▀▄▄▀▀▄▄▀▀▄▐▌▒▒▐▌──────<br>──────▐▌▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐▌──────<br>──────▐▌▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐▌──────<br>Yannick's Macbook Pro: yannick$ git push"],
+        typeSpeed: 0,
+        backDelay: 2200,
+        contentType: 'html'
+  });
   PoIt1Ran = true;
 } else if(position <= -1650 && position >= -1700 && PoIt1Ran === true) {
   $('.portfolio-item1').stop().animate({width: '0px', padding: '0px'}, 320);
@@ -135,23 +158,27 @@ if(position >= -3934 && position <= -3820 && PoIt4Ran === true){
 // -------------------------
 if(position >= -4760 && position <= -4600 && PoIt5Ran === true){
   $('h2[data-info="watIkWilLeren"]').stop().animate({'margin-top': '-170px'},360);
-  node.stop().animate({top: '700px'},300);
-  php.stop().animate({right: '1400px'},300);
-  react.stop().animate({right: '1400px'},300);
+  node.stop().animate({top: '700px'},400);
+  php.stop().animate({top: '-500px'},400);
+  react.stop().animate({top: '700px'},400);
   PoIt5Ran = false;
 } else if(position <= -4775 && position >= -5100 && PoIt5Ran === false){
   $('h2[data-info="watIkWilLeren"]').stop().animate({'margin-top': '170px'},360);
   node.stop().animate({top: '-100px'},760);
   node.animate({top: '100px'},600);
   node.animate({top: '10px'},600);
-  php.stop().animate({right: '30px'},360);
-  react.stop().animate({right: '30px'},360);
+  php.stop().animate({top: '200px'},760);
+  php.animate({top: '-100px'},600);
+  php.animate({top: '10px'},600);
+  react.stop().animate({top: '-100px'},760);
+  react.animate({top: '100px'},600);
+  react.animate({top: '10px'},600);
   PoIt5Ran = true;
 } else if(position <= -5200 && position >= -5400 && PoIt5Ran === true){
   $('h2[data-info="watIkWilLeren"]').stop().animate({'margin-top': '-170px'},360);
-  node.stop().animate({top: '700px'},300);
-  php.stop().animate({right: '1400px'},300);
-  react.stop().animate({right: '1400px'},300);
+  node.stop().animate({top: '700px'},400);
+  php.stop().animate({top: '-500px'},400);
+  react.stop().animate({top: '700px'},400);
   PoIt5Ran = false;
 }
   
@@ -170,9 +197,6 @@ if(e.keyCode === 32 && audioPlaying === false){
   audioPlaying = false;
 }
 }
-function test(e){
-  console.log(e.keyCode);
-}
 
 function backgroundMusicSwitch(){
   if(audioPlaying === false){
@@ -186,4 +210,9 @@ function backgroundMusicSwitch(){
 }
 }
 
+function characterReset(){
+  character.src = "links/character/notMoving@2x.png";
+}
+
 container.addEventListener('keydown', walk);
+container.addEventListener('keyup', characterReset);

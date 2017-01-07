@@ -73,6 +73,15 @@ h2{
   line-height: 22px;
 }
 
+.madeWith{
+  position: absolute;
+  bottom: 60px;
+  width: 1400px;
+  height: 45px;
+  margin: 0px;
+  font-size: 50px
+}
+
 #music-switch{
   position: absolute;
   overflow: hidden;
@@ -111,8 +120,10 @@ h2{
   line-height: 30px;
 }
 
-.portfolio-item1 p{
+.portfolio-item1 span{
   color:lime;
+  font-size: 16px;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .portfolio-item2{
@@ -153,6 +164,10 @@ h2{
   left: 0px;
 }
 
+.portfolio-item3{
+  z-index: 999;
+}
+
 .wrapper{
   background: white;
   width: 1400px;
@@ -167,9 +182,9 @@ h2{
 #character{
   width: 90px;
   position: absolute;
-  bottom: 30px;
+  bottom: 300px;
   left: 102px;
-  transition: all 0.25s ease-in-out, transform 0.8s ease-in-out;
+  transition: all 0.09s ease-in-out, transform 0.8s ease-in-out;
   transform: rotate(0deg);
   z-index: 10;
 }
@@ -268,6 +283,7 @@ h2{
   position: absolute;
   top: 0px;
   left: 0px;
+  z-index: 999;
 }
 
 [data-info="frameworksAndLanguages"]{
@@ -321,6 +337,7 @@ h2{
   position: absolute;
   top: 0px;
   left: 0px;
+  z-index: 999;
 }
 
 [data-info="watIkWilLeren"]{
@@ -329,8 +346,8 @@ h2{
 
 [data-info="react-l"]{
   position: absolute;
-  bottom: 90px;
-  right: 1400px;
+  top: 700px;
+  right: 50px;
 }
 
 [data-info="node-l"]{
@@ -341,6 +358,28 @@ h2{
 
 [data-info="php-l"]{
   position: absolute;
-  bottom: 90px;
-  right: 1400px;
+  top: -500px;
+  left: 580px;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }

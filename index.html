@@ -8,7 +8,6 @@
   <meta name="description" content="Jquery Animation">
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<!--  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.4.0/velocity.min.js"></script>-->
   <link href="https://fonts.googleapis.com/css?family=Caveat:400,700%7CMarck+Script%7CPress+Start+2P" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
 </head>
@@ -35,10 +34,16 @@
           rechts bovenin.
         </p>
       </div>
+      <h2 class="madeWith">Made With Love By Yannick</h2>
     </div>
     <div class="portfolio-item1">
-      <p>Hallo, Ik ben yannick!<br>Ik Volg de opleiding Mediavormgeving in de richting interactief op het MediaCollege Amsterdam.<br>Deze hele basis simpele game is gemaakt met javascript met de Jquary library<br>Je kan het process vinden op de github project pagina door op de knop rechts bovenin te drukken<br><br><br><br>
-      ~Yannick Frisart MV2C</p>
+      <span class="introductieText"></span>
+      
+<!--
+      Hallo, Ik ben yannick!<br>Ik Volg de opleiding Mediavormgeving in de richting interactief op het MediaCollege Amsterdam.<br>Deze hele basis simpele game is gemaakt met javascript met de Jquary library<br>Je kan het process vinden op de github project pagina door op de knop rechts bovenin te drukken<br><br>
+      ~Yannick Frisart MV2C<br>
+      Yannick's Macbook Pro: yannick$ git push|
+-->
     </div>
     <div class="portfolio-item2">
       <h2 data-info="vaardigheden">Mijn Vaardigheden</h2>
@@ -88,20 +93,20 @@
   </div>
  </div>
  <audio src="links/music/background.mp3" loop css="hidden" data-music="background"></audio>
-  <audio src="links/music/jump.wav" css="hidden" data-music="jump"></audio>
+ <audio src="links/music/denied.wav" css="hidden" data-music="denied"></audio>
   <script>
+    const noAcces = document.querySelector('audio[data-music="denied"]');
     const character = document.querySelector('#character');
     const musicSwitch = document.querySelector('#music-switch');
     const container = document.querySelector('body');
     const scene = document.querySelector('.wrapper');
     const grass = document.querySelector('.grass');
     var backgroundMusic = document.querySelector('audio[data-music="background"]');
-    backgroundMusic.volume = 0.1;
-    const jumpSound = document.querySelector('audio[data-music="jump"]');
+    backgroundMusic.volume = 0.3;
     const guide = document.querySelector('.guide');
     let audioPlaying = false;
     var i = 10;
-    var f = 10;
+    var f = 300;
     var backgroundForward = 0;
     var backgroundForward2 = 0;
     var backgroundBackward = 0;
@@ -113,8 +118,12 @@
     let PoIt5Ran = false;
     let node = $('img[data-info="node-l"]');
     let php = $('img[data-info="php-l"]');
-    let react = $('img[data-info="react-l"]')
+    let react = $('img[data-info="react-l"]');
+    let maxHeight = false;
+    let minHeight = false;
+    let characterHeight = 300;
   </script>
+  <script src="js/typed.js"></script>
   <script src="js/scrips.js"></script>
 </body>
 </html>
