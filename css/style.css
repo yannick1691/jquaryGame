@@ -377,27 +377,43 @@ h2{
 }
 
 .portfolio-item6 h3{
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 16px;
-  font-family: 'Bungee Shade', cursive;
+  color:orangered;
+  font-size: 32px;
+  font-family: 'Caveat', cursive;
   text-align: center;
 }
 
 .portfolio-item6 p{
   text-align: center;
+  font-size: 18px;
 }
 
 [data-info="vscode"]{
+  position: absolute;
   width: 220px;
+  height: 350px;
+  top: 280px;
+  left: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 img[alt="vscode"]{
   width: 200px;
-  
 }
 
 [data-info="gitKraken"]{
+  position: absolute;
   width: 220px;
+  height: 350px;
+  top: 280px;
+  right: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 img[alt="gitkraken"]{
@@ -406,8 +422,15 @@ img[alt="gitkraken"]{
 }
 
 [data-info="DigitalOcean"]{
+  position: absolute;
   width: 220px;
-  
+  height: 350px;
+  top: 280px;
+  right: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 img[alt="digitalocean"]{
