@@ -364,6 +364,18 @@ h2{
   left: 580px;
 }
 
+[data-info="vscode"]{
+  display: inline-block;
+}
+
+[data-info="gitKraken"]{
+  display: inline-block;
+}
+
+[data-info="DigitalOcean"]{
+  display: inline-block;
+}
+
 .typed-cursor{
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;

@@ -181,7 +181,16 @@ if(position >= -4760 && position <= -4600 && PoIt5Ran === true){
   react.stop().animate({top: '700px'},400);
   PoIt5Ran = false;
 }
-  
+
+// -------------------------
+//  Portfolio Item 5 code
+// -------------------------
+  if (position >= -5600 && position <= -5500 && PoIt6Ran === true){
+    $('h2[data-info="WhatIUse"]').stop().animate({},);
+    vscode.stop().animate({});
+    gitkraken.stop().animate({},);
+    digitalOcean.stop().animate({},);
+  }
   
 // --------------------------
 //    Background Music

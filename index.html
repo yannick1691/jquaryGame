@@ -91,7 +91,24 @@
       </div>
     </div>
     <div class="portfolio-item6">
-
+      <h2 data-info="WhatIUse">Service's die ik gebruik:</h2>
+      <div class="uses">
+        <div data-info="vscode">
+          <h3>code editor</h3>
+          <img src="links/attributes/vscode.png" alt="vscode">
+          <p>visual studio code</p>
+        </div>
+        <div data-info="gitKraken">
+          <h3>git programma</h3>
+          <img src="links/attributes/gitkraken.png" alt="gitkraken">
+          <p>git kraken</p>
+        </div>
+        <div data-info="DigitalOcean">
+          <h3>server</h3>
+          <img src="links/attributes/digitalocean.png" alt="digitalocean">
+          <p>DigitalOcean</p>
+        </div>
+      </div>
     </div>
   </div>
  </div>
@@ -119,9 +136,13 @@
     let PoIt3Ran = false;
     let PoIt4Ran = false;
     let PoIt5Ran = false;
+    let PoIt6Ran = false;
     let node = $('img[data-info="node-l"]');
     let php = $('img[data-info="php-l"]');
     let react = $('img[data-info="react-l"]');
+    let vscode = $('img[alt="vscode"]');
+    let gitkraken = $('img[alt="gitkraken"]');
+    let digitalOcean = $('img[alt="digitalocean"]');
     let maxHeight = false;
     let minHeight = false;
     let characterHeight = 300;
