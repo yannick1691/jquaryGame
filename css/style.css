@@ -368,16 +368,50 @@ h2{
   margin-top: -170px;
 }
 
+.portfolio-item6{
+  width: 1400px;
+  height: 700px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.portfolio-item6 h3{
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  font-family: 'Bungee Shade', cursive;
+  text-align: center;
+}
+
+.portfolio-item6 p{
+  text-align: center;
+}
+
 [data-info="vscode"]{
-  display: inline-block;
+  width: 220px;
+}
+
+img[alt="vscode"]{
+  width: 200px;
+  
 }
 
 [data-info="gitKraken"]{
-  display: inline-block;
+  width: 220px;
+}
+
+img[alt="gitkraken"]{
+  width: 200px;
+  border-radius: 180px;
 }
 
 [data-info="DigitalOcean"]{
-  display: inline-block;
+  width: 220px;
+  
+}
+
+img[alt="digitalocean"]{
+  width: 200px;
 }
 
 .typed-cursor{
