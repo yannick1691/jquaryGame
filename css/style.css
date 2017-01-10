@@ -364,6 +364,10 @@ h2{
   left: 580px;
 }
 
+[data-info="watImLearning"]{
+  margin-top: -170px;
+}
+
 [data-info="vscode"]{
   display: inline-block;
 }

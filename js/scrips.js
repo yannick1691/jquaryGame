@@ -183,13 +183,23 @@ if(position >= -4760 && position <= -4600 && PoIt5Ran === true){
 }
 
 // -------------------------
-//  Portfolio Item 5 code
+//  Portfolio Item 6 code
 // -------------------------
-  if (position >= -5600 && position <= -5500 && PoIt6Ran === true){
-    $('h2[data-info="WhatIUse"]').stop().animate({},);
-    vscode.stop().animate({});
-    gitkraken.stop().animate({},);
-    digitalOcean.stop().animate({},);
+  if (position >= -5600 && PoIt6Ran === true){
+    $('h2[data-info="WhatIUse"]').stop().animate({'margin-top': '-170px'},360);
+    // vscode.stop().animate({});
+    // gitkraken.stop().animate({},);
+    // digitalOcean.stop().animate({},);
+  } else if(position <= -5615 && position >= -5900 && PoIt6Ran === false){
+    $('h2[data-info="WhatIUse"]').stop().animate({'margin-top': '170px'},360);
+    // vscode.stop().animate({});
+    // gitkraken.stop().animate({},);
+    // digitalOcean.stop().animate({},);
+  } else if(position <= -6000 && PoIt6Ran === true){
+    $('h2[data-info="WhatIUse"]').stop().animate({'margin-top': '-170px'},360);
+    // vscode.stop().animate({});
+    // gitkraken.stop().animate({},);
+    // digitalOcean.stop().animate({},);
   }
   
 // --------------------------
@@ -225,3 +235,85 @@ function characterReset(){
 
 container.addEventListener('keydown', walk);
 container.addEventListener('keyup', characterReset);
+
+// Dev test function so i dont have hold arrow keys. Fires all animations with a set delay
+
+function devTest(){ // fade in portfolio 1
+  $('.guide').fadeOut('slow');
+  $('.portfolio-item1').stop().animate({width: '1200px', padding: '15px'}, 620);
+  $(".introductieText").typed({
+        strings: ["Hallo, Ik ben yannick!", "Ik Volg de opleiding Mediavormgeving in de richting interactief op het MediaCollege Amsterdam.", "Deze hele basis simpele 'game' is gemaakt met javascript met de Jquary library", "Je kan het process vinden op de github project pagina door op de knop rechts bovenin te drukken", "~Yannick Frisart MV2C", "────────────────────────────────────<br>──────────▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄──────────<br>────────▄▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄────────<br>──────▐▌▒████▒▒▒▒▒▒▒▒████▒▒▐▌──────<br>──────▐▌▒▒████▒▒▒▒▒▒▒▒████▒▒▐▌──────<br>▐▌▀▄──▐▌▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐▌──▄▀▐▌<br>▐▌▒▒▀▄▐▌▒▒▐▌▀▄▄▀▀▄▄▀▀▄▄▀▐▌▒▒▐▌▄▀▒▒▐▌<br>▐▌▒▒▒▒▐▌▒▒▐▌▒▒▒▒▒▒▒▒▒▒▒▒▐▌▒▒▐▌▒▒▒▒▐▌<br>──▀▄▒▒▐▌▒▒▐▌▒▒▒▒▒▒▒▒▒▒▒▒▐▌▒▒▐▌▒▒▄▀──<br>────▀▄▐▌▒▒▐▌▒▒▒▒▒▒▒▒▒▒▒▒▐▌▒▒▐▌▄▀────<br>──────▐▌▒▒▐▌▄▀▀▄▄▀▀▄▄▀▀▄▐▌▒▒▐▌──────<br>──────▐▌▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐▌──────<br>──────▐▌▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐▌──────<br>Yannick's Macbook Pro: yannick$ git push"],
+        typeSpeed: 0,
+        backDelay: 2200,
+        contentType: 'html'
+  });
+  setTimeout(function() { // fade out portfolio 1
+    $('.portfolio-item1').stop().animate({width: '0px', padding: '0px'}, 320);
+    setTimeout(function() { // fade in portfolio 2
+      $('h2[data-info="vaardigheden"]').stop().animate({top: '-50px'}, 670);
+      $('img[data-info="css3"]').stop().animate({top: '120px'}, 690, 'swing');
+      $('img[data-info="html5"]').stop().animate({top: '120px'}, 690, 'swing');
+      $('img[data-info="js"]').stop().animate({top: '120px'}, 690, 'swing');
+      setTimeout(function() { // fade out portfolio 2
+        $('h2[data-info="vaardigheden"]').stop().animate({top: '-290px'}, 360);
+        $('img[data-info="css3"]').stop().animate({top: '800px'}, 370);
+        $('img[data-info="html5"]').stop().animate({top: '800px'}, 370);
+        $('img[data-info="js"]').stop().animate({top: '800px'}, 370);
+        setTimeout(function() { // fade in portfolio 3
+          $('h2[data-info="timeSpent"]').stop().animate({'margin-top': '170px'}, 880);
+          $('p[data-info="html-hours"]').stop().animate({opacity: '1', 'font-size': '45px'},890);
+          $('p[data-info="css-hours"]').stop().animate({opacity: '1', 'font-size': '45px'},890);
+          $('p[data-info="js-hours"]').stop().animate({opacity: '1', 'font-size': '45px'},890);
+          setTimeout(function() { // fade out portfolio 3
+            $('h2[data-info="timeSpent"]').stop().animate({'margin-top': '-100px'}, 360);
+            $('p[data-info="html-hours"]').stop().animate({opacity: '0', 'font-size': '10px'},300);
+            $('p[data-info="css-hours"]').stop().animate({opacity: '0', 'font-size': '10px'},300);
+            $('p[data-info="js-hours"]').stop().animate({opacity: '0', 'font-size': '10px'},300);
+            setTimeout(function() { // fade in portfolio 4
+              $('h2[data-info="watImLearning"]').stop().animate({'margin-top': '170px'},360)
+              $('img[data-info="es6-l"]').stop().animate({bottom: '80px'},600);
+              $('img[data-info="jquary-l"]').stop().animate({right: '50px'},600);
+              $('img[data-info="less-l"]').stop().animate({left: '50px'},600);
+              setTimeout(function() { // fade out portfolio 4
+                $('h2[data-info="watImLearning"]').stop().animate({'margin-top': '-170px'},360)
+                $('img[data-info="es6-l"]').stop().animate({bottom: '-300px'},300);
+                $('img[data-info="jquary-l"]').stop().animate({right: '1400px'},300);
+                $('img[data-info="less-l"]').stop().animate({left: '1400px'},300);
+                setTimeout(function() { // Fade in portfolio 5
+                  $('h2[data-info="watIkWilLeren"]').stop().animate({'margin-top': '170px'},360);
+                  node.stop().animate({top: '-100px'},760);
+                  node.animate({top: '100px'},600);
+                  node.animate({top: '10px'},600);
+                  php.stop().animate({top: '200px'},760);
+                  php.animate({top: '-100px'},600);
+                  php.animate({top: '10px'},600);
+                  react.stop().animate({top: '-100px'},760);
+                  react.animate({top: '100px'},600);
+                  react.animate({top: '10px'},600);
+                  setTimeout(function() { // Fade out Portfolio 5
+                    $('h2[data-info="watIkWilLeren"]').stop().animate({'margin-top': '-170px'},360);
+                    node.stop().animate({top: '700px'},400);
+                    php.stop().animate({top: '-500px'},400);
+                    react.stop().animate({top: '700px'},400);
+                    setTimeout(function() { // fade in portfolio 6
+                      $('h2[data-info="WhatIUse"]').stop().animate({'margin-top': '170px'},360);
+                      // vscode.stop().animate({});
+                      // gitkraken.stop().animate({},);
+                      // digitalOcean.stop().animate({},);
+                      setTimeout(function() { // fade out portfolio 6
+                        $('h2[data-info="WhatIUse"]').stop().animate({'margin-top': '-170px'},360);
+                        // vscode.stop().animate({});
+                        // gitkraken.stop().animate({},);
+                        // digitalOcean.stop().animate({},);
+                      }, 8000);
+                    }, 400);
+                  }, 8000);
+                }, 400);
+              }, 8000);
+            }, 400);
+          }, 8000);
+        }, 400);
+      }, 8000);
+    }, 400);
+  }, 8000);
+}
