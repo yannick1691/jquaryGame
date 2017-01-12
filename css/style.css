@@ -388,6 +388,16 @@ h2{
   font-size: 18px;
 }
 
+[data-info="WhatIUse"]{
+  position: absolute;
+  left: 0px;
+  top: -170px;
+  width: 1400px;
+  height: 55px;
+  border: 1px solid red;
+  opacity: 0.0;
+}
+
 [data-info="vscode"]{
   position: absolute;
   width: 220px;
@@ -402,6 +412,13 @@ h2{
 
 img[alt="vscode"]{
   width: 200px;
+  margin-left: -600px;
+  margin-top: -1200px;
+  opacity: 0.0;
+}
+
+[data-info="vscodep"]{
+  opacity: 0.0;
 }
 
 [data-info="gitKraken"]{
@@ -419,6 +436,13 @@ img[alt="vscode"]{
 img[alt="gitkraken"]{
   width: 200px;
   border-radius: 180px;
+  margin-left: -600px;
+  opacity: 0.0;
+  margin-bottom: -1200px;
+}
+
+[data-info="gitkrakenp"]{
+  opacity: 0.0;
 }
 
 [data-info="DigitalOcean"]{
@@ -435,7 +459,15 @@ img[alt="gitkraken"]{
 
 img[alt="digitalocean"]{
   width: 200px;
+  margin-right: -600px;
+  margin-top: -1200px;
+  opacity: 0.0;
 }
+
+[data-info="digitaloceanp"]{
+  opacity: 0.0;
+}
+
 
 .typed-cursor{
     opacity: 1;

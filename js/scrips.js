@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  
 });
 
 // ----------------------------
@@ -77,7 +78,7 @@ if(position>= -1200 && position <= -760 && PoIt1Ran === true) { // Fade out port
 } else if(position <= -1650 && position >= -1700 && PoIt1Ran === true) { // fade out portfolio1
   $('.portfolio-item1').stop().animate({width: '0px', padding: '0px'}, 320);
   PoIt1Ran = false;
-}
+} 
 
 // -------------------------
 //  Portfolio Item 2 code
@@ -186,20 +187,50 @@ if(position >= -4760 && position <= -4600 && PoIt5Ran === true){ // fade out por
 //  Portfolio Item 6 code
 // -------------------------
   if (position >= -5600 && PoIt6Ran === true){ // fade out portfolio6
-    $('h2[data-info="WhatIUse"]').stop().animate({'margin-top': '-170px'},360);
-    // vscode.stop().animate({});
+    $('h2[data-info="WhatIUse"]').stop().animate({top: '-170px'},360);
+    vscodep.stop().animate({opacity: '0.0'},900);
+    vscodeh3.stop().animate({opacity: '0.0'},900);
+    vscode.stop().animate({opacity: '0.0', 'margin-left': '-600px', 'margin-top': '-1200px'},900);
+    gitkrakenp.stop().animate({opacity: '0.0'},900);
+    gitkrakenh3.stop().animate({opacity: '0.0'},900);
+    gitkraken.stop().animate({opacity: '0.0', 'margin-left': '-300px', 'margin-bottom': '-1200px'},900);
+    digitalOceanp.stop().animate({opacity: '0.0'},900);
+    digitalOceanh3.stop().animate({opacity: '0.0'},900);
+    digitalOcean.stop().animate({opacity: '0.0', 'margin-right': '-600px', 'margin-top': '-1200px'},900);
+
     // gitkraken.stop().animate({},);
     // digitalOcean.stop().animate({},);
+    PoIt6Ran = false;
   } else if(position <= -5615 && position >= -5900 && PoIt6Ran === false){ // fade in portfolio6
-    $('h2[data-info="WhatIUse"]').stop().animate({'margin-top': '170px'},360);
-    // vscode.stop().animate({});
-    // gitkraken.stop().animate({},);
-    // digitalOcean.stop().animate({},);
+    $('h2[data-info="WhatIUse"]').stop().animate({top: '170px'},360);
+    vscodep.stop().animate({opacity: '1'},500);
+    vscodeh3.stop().animate({opacity: '1'},500);
+    vscode.stop().animate({opacity: '1', 'margin-left': '0px', 'margin-top': '0px'},900);
+    gitkrakenp.stop().animate({opacity: '1'},500);
+    gitkrakenh3.stop().animate({opacity: '1'},500);
+    gitkraken.stop().animate({opacity: '1', 'margin-left': '0px', 'margin-bottom': '0px'},900);
+    digitalOceanp.stop().animate({opacity: '1'},500);
+    digitalOceanh3.stop().animate({opacity: '1'},500);
+    digitalOcean.stop().animate({opacity: '1', 'margin-right': '0px', 'margin-top': '0px'},900);
+    setTimeout(function() {
+      vscode.stop().animate({opacity: '1', 'margin-left': '0px', 'margin-top': '0px'},900);
+      gitkraken.stop().animate({opacity: '1', 'margin-left': '0px', 'margin-bottom': '0px'},900);
+      digitalOcean.stop().animate({opacity: '1', 'margin-right': '0px', 'margin-top': '0px'},900);
+      
+    }, 700);
+    PoIt6Ran = true;
   } else if(position <= -6000 && PoIt6Ran === true){ // fade out portfolio6
-    $('h2[data-info="WhatIUse"]').stop().animate({'margin-top': '-170px'},360);
-    // vscode.stop().animate({});
-    // gitkraken.stop().animate({},);
-    // digitalOcean.stop().animate({},);
+    $('h2[data-info="WhatIUse"]').stop().animate({top: '-170px'},360);
+    vscodep.stop().animate({opacity: '0.0'},900);
+    vscodeh3.stop().animate({opacity: '0.0'},900);
+    vscode.stop().animate({opacity: '0.0', 'margin-left': '-600px', 'margin-top': '-1200px'},900);
+    gitkrakenp.stop().animate({opacity: '0.0'},900);
+    gitkrakenh3.stop().animate({opacity: '0.0'},900);
+    gitkraken.stop().animate({opacity: '0.0', 'margin-left': '-300px', 'margin-bottom': '-1200px'},900);
+    digitalOceanp.stop().animate({opacity: '0.0'},900);
+    digitalOceanh3.stop().animate({opacity: '0.0'},900);
+    digitalOcean.stop().animate({opacity: '0.0', 'margin-right': '-600px', 'margin-top': '-1200px'},900);
+    PoIt6Ran = false;
   }
   
 // --------------------------
