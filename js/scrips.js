@@ -197,9 +197,6 @@ if(position >= -4760 && position <= -4600 && PoIt5Ran === true){ // fade out por
     digitalOceanp.stop().animate({opacity: '0.0'},900);
     digitalOceanh3.stop().animate({opacity: '0.0'},900);
     digitalOcean.stop().animate({opacity: '0.0', 'margin-right': '-600px', 'margin-top': '-1200px'},900);
-
-    // gitkraken.stop().animate({},);
-    // digitalOcean.stop().animate({},);
     PoIt6Ran = false;
   } else if(position <= -5615 && position >= -5900 && PoIt6Ran === false){ // fade in portfolio6
     $('h2[data-info="WhatIUse"]').stop().animate({top: '170px'},360);
