@@ -381,6 +381,7 @@ h2{
   font-size: 32px;
   font-family: 'Caveat', cursive;
   text-align: center;
+  opacity: 0.0;
 }
 
 .portfolio-item6 p{
