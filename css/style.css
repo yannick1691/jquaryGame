@@ -364,6 +364,112 @@ h2{
   left: 580px;
 }
 
+[data-info="watImLearning"]{
+  margin-top: -170px;
+}
+
+.portfolio-item6{
+  width: 1400px;
+  height: 700px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.portfolio-item6 h3{
+  color:orangered;
+  font-size: 32px;
+  font-family: 'Caveat', cursive;
+  text-align: center;
+  opacity: 0.0;
+}
+
+.portfolio-item6 p{
+  text-align: center;
+  font-size: 18px;
+}
+
+[data-info="WhatIUse"]{
+  position: absolute;
+  left: 0px;
+  top: -170px;
+  width: 1400px;
+  height: 55px;
+  border: 1px solid red;
+  opacity: 0.0;
+}
+
+[data-info="vscode"]{
+  position: absolute;
+  width: 220px;
+  height: 350px;
+  top: 280px;
+  left: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img[alt="vscode"]{
+  width: 200px;
+  margin-left: -600px;
+  margin-top: -1200px;
+  opacity: 0.0;
+}
+
+[data-info="vscodep"]{
+  opacity: 0.0;
+}
+
+[data-info="gitKraken"]{
+  position: absolute;
+  width: 220px;
+  height: 350px;
+  top: 280px;
+  right: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img[alt="gitkraken"]{
+  width: 200px;
+  border-radius: 180px;
+  margin-left: -600px;
+  opacity: 0.0;
+  margin-bottom: -1200px;
+}
+
+[data-info="gitkrakenp"]{
+  opacity: 0.0;
+}
+
+[data-info="DigitalOcean"]{
+  position: absolute;
+  width: 220px;
+  height: 350px;
+  top: 280px;
+  right: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img[alt="digitalocean"]{
+  width: 200px;
+  margin-right: -600px;
+  margin-top: -1200px;
+  opacity: 0.0;
+}
+
+[data-info="digitaloceanp"]{
+  opacity: 0.0;
+}
+
+
 .typed-cursor{
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;

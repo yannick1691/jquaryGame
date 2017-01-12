@@ -90,38 +90,63 @@
         <img data-info="react-l" src="links/attributes/react.png" alt="react" height="150">
       </div>
     </div>
+    <div class="portfolio-item6">
+      <h2 data-info="WhatIUse">Service's die ik gebruik:</h2>
+      <div class="uses">
+        <div data-info="vscode">
+          <h3 data-info="vscodeh3">code editor</h3>
+          <img src="links/attributes/vscode.png" alt="vscode">
+          <p data-info="vscodep">vs code</p>
+        </div>
+        <div data-info="gitKraken">
+          <h3 data-info="gitkrakenh3">git programma</h3>
+          <img src="links/attributes/gitkraken.jpg" alt="gitkraken">
+          <p data-info="gitkrakenp">git kraken</p>
+        </div>
+        <div data-info="DigitalOcean">
+          <h3 data-info="digitaloceanh3">server</h3>
+          <img src="links/attributes/digitalocean.png" alt="digitalocean">
+          <p data-info="digitaloceanp">DigitalOcean</p>
+        </div>
+      </div>
+    </div>
   </div>
  </div>
  <audio src="links/music/background.mp3" loop css="hidden" data-music="background"></audio>
  <audio src="links/music/denied.wav" css="hidden" data-music="denied"></audio>
   <script>
-    const noAcces = document.querySelector('audio[data-music="denied"]');
-    const character = document.querySelector('#character');
-    const musicSwitch = document.querySelector('#music-switch');
-    const container = document.querySelector('body');
-    const scene = document.querySelector('.wrapper');
-    const grass = document.querySelector('.grass');
-    var backgroundMusic = document.querySelector('audio[data-music="background"]');
-    backgroundMusic.volume = 0.3;
-    const guide = document.querySelector('.guide');
-    let audioPlaying = false;
-    var i = 10;
-    var f = 300;
-    var backgroundForward = 0;
-    var backgroundForward2 = 0;
-    var backgroundBackward = 0;
-    var backgroundBackward2 = 0;
-    let PoIt1Ran = false;
-    let PoIt2Ran = false;
-    let PoIt3Ran = false;
-    let PoIt4Ran = false;
-    let PoIt5Ran = false;
-    let node = $('img[data-info="node-l"]');
-    let php = $('img[data-info="php-l"]');
-    let react = $('img[data-info="react-l"]');
-    let maxHeight = false;
-    let minHeight = false;
-    let characterHeight = 300;
+    const noAcces = document.querySelector('audio[data-music="denied"]'); // select's the no acces mp3
+    const character = document.querySelector('#character'); // pretty straight forward selects the character
+    const musicSwitch = document.querySelector('#music-switch'); // defines the music switch button to change music on click
+    const container = document.querySelector('body'); // sets the variable container to absolute body
+    const scene = document.querySelector('.wrapper'); // define's the wrapper (basicly the canvas)
+    var backgroundMusic = document.querySelector('audio[data-music="background"]'); // Select's the background mp3
+    backgroundMusic.volume = 0.3; // define's the background Music Volume
+    const guide = document.querySelector('.guide'); // Variable used to define .guide
+    let audioPlaying = false; // variable used to check if background music is playing
+    var i = 10; // Variable used in character movement
+    var f = 300; // variable used for moving up and down
+    let PoIt1Ran = false; //Portfolio item 1 ran value (used to prevent .animate from spam running)
+    let PoIt2Ran = false; //Portfolio item 2 ran value (used to prevent .animate from spam running)
+    let PoIt3Ran = false; //Portfolio item 3 ran value (used to prevent .animate from spam running)
+    let PoIt4Ran = false; //Portfolio item 4 ran value (used to prevent .animate from spam running)
+    let PoIt5Ran = false; //Portfolio item 5 ran value (used to prevent .animate from spam running)
+    let PoIt6Ran = false; //Portfolio item 6 ran value (used to prevent .animate from spam running)
+    let node = $('img[data-info="node-l"]'); // logo node
+    let php = $('img[data-info="php-l"]'); // logo php
+    let react = $('img[data-info="react-l"]'); // logo react
+    let vscode = $('img[alt="vscode"]'); // Logo VsCode
+    let vscodeh3 = $('h3[data-info="vscodeh3"]'); // h3 VsCode
+    let vscodep = $('p[data-info="vscodep"]'); // p VsCode
+    let gitkraken = $('img[alt="gitkraken"]'); // Logo Kitkraken
+    let gitkrakenh3 = $('h3[data-info="gitkrakenh3"]'); // h3 Kitkraken
+    let gitkrakenp = $('p[data-info="gitkrakenp"]'); // p Kitkraken
+    let digitalOcean = $('img[alt="digitalocean"]'); // Logo digitalocean
+    let digitalOceanh3 = $('h3[data-info="digitaloceanh3"]'); // h3 digitalocean
+    let digitalOceanp = $('p[data-info="digitaloceanp"]'); // p digitalocean
+    let maxHeight = false; // Variable used in scrip to prevent character from leaving the viewport
+    let minHeight = false; // variable used to prevent character from going below the viewport
+    let characterHeight = 300; // variable used to define character start position
   </script>
   <script src="js/typed.js"></script>
   <script src="js/scrips.js"></script>
