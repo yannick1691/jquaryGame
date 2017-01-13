@@ -321,16 +321,30 @@ function devTest(){ // fade in portfolio 1
                     php.stop().animate({top: '-500px'},400);
                     react.stop().animate({top: '700px'},400);
                     setTimeout(function() { // fade in portfolio 6
-                      $('h2[data-info="WhatIUse"]').stop().animate({'margin-top': '170px'},360);
-                      // vscode.stop().animate({});
-                      // gitkraken.stop().animate({},);
-                      // digitalOcean.stop().animate({},);
-                      setTimeout(function() { // fade out portfolio 6
-                        $('h2[data-info="WhatIUse"]').stop().animate({'margin-top': '-170px'},360);
-                        // vscode.stop().animate({});
-                        // gitkraken.stop().animate({},);
-                        // digitalOcean.stop().animate({},);
-                      }, 8000);
+                      $('h2[data-info="WhatIUse"]').stop().animate({top: '170px'},360);
+                      vscodep.stop().animate({opacity: '1'},900);
+                      vscodeh3.stop().animate({opacity: '1'},900);
+                      gitkrakenp.stop().animate({opacity: '1'},900);
+                      gitkrakenh3.stop().animate({opacity: '1'},900);
+                      digitalOceanp.stop().animate({opacity: '1'},900);
+                      digitalOceanh3.stop().animate({opacity: '1'},900);
+                      setTimeout(function() {
+                        vscode.stop().animate({opacity: '1', 'margin-left': '0px', 'margin-top': '0px'},600);
+                        gitkraken.stop().animate({opacity: '1', 'margin-left': '0px', 'margin-bottom': '0px'},600);
+                        digitalOcean.stop().animate({opacity: '1', 'margin-right': '0px', 'margin-top': '0px'},600);
+                        setTimeout(function() { // fade out portfolio 6
+                          $('h2[data-info="WhatIUse"]').stop().animate({top: '-170px'},360);
+                          vscodep.stop().animate({opacity: '0.0'},900);
+                          vscodeh3.stop().animate({opacity: '0.0'},900);
+                          vscode.stop().animate({opacity: '0.0', 'margin-left': '-600px', 'margin-top': '-1200px'},900);
+                          gitkrakenp.stop().animate({opacity: '0.0'},900);
+                          gitkrakenh3.stop().animate({opacity: '0.0'},900);
+                          gitkraken.stop().animate({opacity: '0.0', 'margin-left': '-300px', 'margin-bottom': '-1200px'},900);
+                          digitalOceanp.stop().animate({opacity: '0.0'},900);
+                          digitalOceanh3.stop().animate({opacity: '0.0'},900);
+                          digitalOcean.stop().animate({opacity: '0.0', 'margin-right': '-600px', 'margin-top': '-1200px'},900);
+                        }, 8000);
+                      }, 500);
                     }, 400);
                   }, 8000);
                 }, 400);
