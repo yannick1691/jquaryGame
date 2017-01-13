@@ -14,7 +14,7 @@
 <body>
  <div class="center-wrapper">
   <div class="wrapper">
-    <img src="links/character/notMoving@2x.png" alt="character" id="character">
+    <img src="links/character/notMoving@2x.png" alt="character" id="character1">
     <div id="music-switch" onclick="backgroundMusicSwitch()"></div>
     <a href="https://github.com/yannick1691/jquaryGame" target="_blank" class="github"><img src="links/icons/Octocat.png" height="55" alt="github"></a>
     <div class="guide">
@@ -116,7 +116,7 @@
  <audio src="links/music/denied.wav" css="hidden" data-music="denied"></audio>
   <script>
     const noAcces = document.querySelector('audio[data-music="denied"]'); // select's the no acces mp3
-    const character = document.querySelector('#character'); // pretty straight forward selects the character
+    const character = document.querySelector('#character1'); // pretty straight forward selects the character
     const musicSwitch = document.querySelector('#music-switch'); // defines the music switch button to change music on click
     const container = document.querySelector('body'); // sets the variable container to absolute body
     const scene = document.querySelector('.wrapper'); // define's the wrapper (basicly the canvas)
