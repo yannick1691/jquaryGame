@@ -11,12 +11,12 @@ function walk(e){ // Everything in this function is triggered when event keydown
     character.src = "links/character/moving@2x.png"; 
     character.style.transform = 'rotate(0deg)';
     scene.style.backgroundPosition = `${i}px`;
-    i = i - 20; 
+    i = i - 23; 
   } else if(e.keyCode === 37 && position <= -20) {  // Code Om Naar Links Te Gaan
     character.src = "links/character/moving@2x.png";
     character.style.transform = 'rotate(180deg)';
     scene.style.backgroundPosition = `${i}px`;
-    i = i + 20;
+    i = i + 23;
   } else if(e.keyCode === 38 && characterHeight >= 591 && maxHeight === false){  // Code Die Kijkt of je Max height heb bereikt
     character.src = "links/character/moving@2x.png";
     character.style.transform = 'rotate(-90deg)';
@@ -70,8 +70,8 @@ if(position>= -1200 && position <= -760 && PoIt1Ran === true) { // Fade out port
   $('.portfolio-item1').stop().animate({width: '1200px', padding: '15px'}, 620);
   $(".introductieText").typed({
         strings: ["Hallo, Ik ben yannick!", "Ik Volg de opleiding Mediavormgeving in de richting interactief op het MediaCollege Amsterdam.", "Deze hele basis simpele 'game' is gemaakt met javascript met de Jquery library", "Je kan het process vinden op de github project pagina door op de knop rechts bovenin te drukken", "~Yannick Frisart MV2C", "────────────────────────────────────<br>──────────▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄──────────<br>────────▄▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄────────<br>──────▐▌▒████▒▒▒▒▒▒▒▒████▒▒▐▌──────<br>──────▐▌▒▒████▒▒▒▒▒▒▒▒████▒▒▐▌──────<br>▐▌▀▄──▐▌▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐▌──▄▀▐▌<br>▐▌▒▒▀▄▐▌▒▒▐▌▀▄▄▀▀▄▄▀▀▄▄▀▐▌▒▒▐▌▄▀▒▒▐▌<br>▐▌▒▒▒▒▐▌▒▒▐▌▒▒▒▒▒▒▒▒▒▒▒▒▐▌▒▒▐▌▒▒▒▒▐▌<br>──▀▄▒▒▐▌▒▒▐▌▒▒▒▒▒▒▒▒▒▒▒▒▐▌▒▒▐▌▒▒▄▀──<br>────▀▄▐▌▒▒▐▌▒▒▒▒▒▒▒▒▒▒▒▒▐▌▒▒▐▌▄▀────<br>──────▐▌▒▒▐▌▄▀▀▄▄▀▀▄▄▀▀▄▐▌▒▒▐▌──────<br>──────▐▌▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐▌──────<br>──────▐▌▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐▌──────<br>Yannick's Macbook Pro: yannick$ git push"],
-        typeSpeed: 0,
-        backDelay: 2200,
+        typeSpeed: 30,
+        backDelay: 300,
         contentType: 'html'
   });
   PoIt1Ran = true;
@@ -227,6 +227,16 @@ if(position >= -4760 && position <= -4600 && PoIt5Ran === true){ // fade out por
     PoIt6Ran = false;
   }
   
+// -------------------------
+//  End Code
+// -------------------------
+if(position >= - 6100 && endRan === true){
+  endH2.stop().animate({'margin-top': '-500px'},500);
+  endRan = false;
+} else if(position <= -6116 && endRan === false){
+  endH2.stop().animate({'margin-top': '0px'},900);
+  endRan = true;
+}
 // --------------------------
 //    Background Music
 // --------------------------
