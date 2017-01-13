@@ -188,7 +188,7 @@ h2{
   left: 102px;
   transition: all 0.09s ease-in-out, transform 0.8s ease-in-out;
   transform: rotate(0deg);
-  z-index: 99999;
+  z-index: 2;
 }
 
 .hidden{
@@ -396,7 +396,6 @@ h2{
   width: 1400px;
   height: 55px;
   border: 1px solid red;
-  opacity: 0.0;
 }
 
 [data-info="vscode"]{
