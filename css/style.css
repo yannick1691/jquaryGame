@@ -98,7 +98,7 @@ h2{
 
 .center-wrapper{
   width: 100vw;
-  height: 100vh;;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,14 +181,14 @@ h2{
   overflow: hidden;
 }
 
-#character{
+#character1{
   width: 90px;
   position: absolute;
   bottom: 300px;
   left: 102px;
   transition: all 0.09s ease-in-out, transform 0.8s ease-in-out;
   transform: rotate(0deg);
-  z-index: 99999;
+  z-index: 2;
 }
 
 .hidden{
@@ -395,8 +395,6 @@ h2{
   top: -170px;
   width: 1400px;
   height: 55px;
-  border: 1px solid red;
-  opacity: 0.0;
 }
 
 [data-info="vscode"]{
