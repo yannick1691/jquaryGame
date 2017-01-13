@@ -98,7 +98,7 @@ h2{
 
 .center-wrapper{
   width: 100vw;
-  height: 100vh;;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,7 +181,7 @@ h2{
   overflow: hidden;
 }
 
-#character{
+#character1{
   width: 90px;
   position: absolute;
   bottom: 300px;
@@ -395,7 +395,6 @@ h2{
   top: -170px;
   width: 1400px;
   height: 55px;
-  border: 1px solid red;
 }
 
 [data-info="vscode"]{
