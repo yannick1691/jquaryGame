@@ -34,6 +34,14 @@
           rechts bovenin.
         </p>
       </div>
+      <div class="step4">
+        <p>
+          Blijf naar rechts gaan voor de animaties!
+          <br>
+          --> --> --> --> --> --> --> --> --> --> --> -->
+          
+        </p>
+      </div>
       <h2 class="madeWith">Made With Love By Yannick</h2>
     </div>
     <div class="portfolio-item1">
@@ -57,19 +65,19 @@
         <div class="css-hours">
           <p data-info="css-hours">
             css:<br>
-            <span class="hours-spent">~4 uur</span>
+            <span class="hours-spent">~4 - 5 uur</span>
           </p>
         </div>
         <div class="html-hours">
           <p data-info="html-hours">
            html:<br>
-           <span class="hours-spent">~3 uur</span>
+           <span class="hours-spent">~2 - 3 uur</span>
           </p>
         </div>
         <div class="js-hours">
           <p data-info="js-hours">
            Javascript:<br>
-           <span class="hours-spent">~5 uur</span>
+           <span class="hours-spent">~5 - 15 uur</span>
           </p>
         </div>
       </div>
@@ -110,6 +118,9 @@
         </div>
       </div>
     </div>
+    <div class="end">
+      <h2 data-info="theEnd">The End<br><small>have a nice day</small></h2>
+    </div>
   </div>
  </div>
  <audio src="links/music/background.mp3" loop css="hidden" data-music="background"></audio>
@@ -144,10 +155,12 @@
     let digitalOcean = $('img[alt="digitalocean"]'); // Logo digitalocean
     let digitalOceanh3 = $('h3[data-info="digitaloceanh3"]'); // h3 digitalocean
     let digitalOceanp = $('p[data-info="digitaloceanp"]'); // p digitalocean
+    let endH2 = $('h2[data-info="theEnd"]'); // h2 of The End
     let maxHeight = false; // Variable used in scrip to prevent character from leaving the viewport
     let minHeight = false; // variable used to prevent character from going below the viewport
     let characterHeight = 300; // variable used to define character start position
-  </script>
+    let endRan = false //Variable to prevent spammy jquaryAnimation by keydown element
+	</script>
   <script src="js/typed.js"></script>
   <script src="js/scrips.js"></script>
 </body>
